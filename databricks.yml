@@ -10,8 +10,8 @@ include:
 targets:
   dev:
     workspace:
-      root_path: /Shared/live/dev       # override solo para dev
+      root_path: /Shared/GitHub/dev       # override solo para dev
   prod:
     workspace:
-      root_path: /Shared/live/prd
+      root_path: /Shared/GitHub/prd
   
