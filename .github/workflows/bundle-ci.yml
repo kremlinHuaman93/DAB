@@ -37,7 +37,6 @@ jobs:
           DATABRICKS_TOKEN: ${{ secrets.DATABRICKS_TOKEN_DEV }}
         run: |
           databricks bundle deploy --target dev
-          databricks bundle run hello_job --target dev
 
   deploy_prod:
     name: Deploy to Prod
