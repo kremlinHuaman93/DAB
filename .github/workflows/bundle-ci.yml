@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: databricks/setup-cli@v1
+      - uses: databricks/setup-cli@main
       - name: Validate bundle (dev)
         env:
           DATABRICKS_HOST: ${{ secrets.DATABRICKS_HOST_DEV }}
@@ -30,7 +30,7 @@ jobs:
     environment: dev
     steps:
       - uses: actions/checkout@v4
-      - uses: databricks/setup-cli@v1
+      - uses: databricks/setup-cli@main
       - name: Deploy (dev)
         env:
           DATABRICKS_HOST: ${{ secrets.DATABRICKS_HOST_DEV }}
@@ -46,7 +46,7 @@ jobs:
     environment: prod   # approvals obligatorios aquí
     steps:
       - uses: actions/checkout@v4
-      - uses: databricks/setup-cli@v1
+      - uses: databricks/setup-cli@main
       - name: Deploy (prod)
         env:
           DATABRICKS_HOST: ${{ secrets.DATABRICKS_HOST_PROD }}
